@@ -1,0 +1,65 @@
+#game {
+    width:1000px;
+    height:400px;
+    margin: auto;
+    border-bottom: 1px solid black;
+}
+.dino {
+    position: absolute;
+    width: 90px;
+    height: 85px;
+    left: 300px;
+    top:323px;
+    background-image: url("Dinosaur.png");
+    animation:dino 2s infinite steps(2, end);
+}
+#cactus {
+    position: absolute;
+    width: 50px;
+    height: 58px;
+    background-image: url("cacti2.png");
+    object-fit: fill;
+    background-size: cover;
+    left: 1100px;
+    top: 350px;
+    animation: cactusMoving 2s infinite linear;
+}
+.jumpingDino {
+     animation: jump 0.5s linear, dino 2s infinite steps(2, end); 
+}
+
+#score {
+    font-family: monospace;
+    font-size: 40px;
+    float: right;
+}
+
+#maxScore {
+    font-family: monospace;
+    font-size: 40px;
+    float: left;
+}
+
+@keyframes jump {
+    0% {
+        top: 323px;
+    }
+    50% {
+        top: 180px;
+    }
+    100% {
+        top: 323px;
+    }
+}
+@keyframes cactusMoving {
+    0% {
+        left: 1150px;
+    }
+    100% {
+        left: 15vw;
+    }
+}
+@keyframes dino {
+    0% { background-position: 0px;}
+    100% { background-position: 177px;}
+}
